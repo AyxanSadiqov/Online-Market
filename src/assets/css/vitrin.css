@@ -1,0 +1,174 @@
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .3s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
+}
+@media (max-width : 500px){
+    .urunler-col{
+        width: 150px !important;
+    }
+}
+@media (max-width : 400px){
+    .min-height-name{
+        font-size: 12px;
+        min-height: 26px !important;
+        max-height: 26px !important;
+    }
+    .urunler-mobile{
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+    }
+    .vitrin-yazi-baslik{
+        display: inline-block;
+        width: 230px;
+        white-space: nowrap;
+        overflow: hidden !important;
+        text-overflow: ellipsis;
+    }
+}
+@media (max-width : 320px){
+    .urunler-col{
+        margin-left: -7px;
+        margin-right: -7px;
+    }
+    .vitrin-yazi-baslik{
+        width: 200px !important;
+    }
+}
+.float-left{
+    display: inline;
+    float: left;
+}
+.urunler-col{
+    margin-left: -10px;
+    margin-right: -10px;
+    height: 365px;
+    width: 180px;
+}
+img.first{
+    max-width: 100px;
+    max-height: 130px;
+    object-fit: contain;
+}
+.min-height-name{
+    margin-top: -5px;
+    min-height: 40px;
+    max-height: 40px;
+    overflow: hidden !important;
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.max-width-img{
+    min-height: 150px;
+    max-height: 150px;
+}
+.urunler-adet-input{
+    padding-left: 8px;
+    display: flex;
+    justify-content: center;
+}
+.card{
+    border: 1px solid #dfdfdf;
+    border-radius: 10px;
+    box-shadow: 0 0px rgba(0,0,0,0.2);
+}
+.vitrin-urunler{
+    overflow: auto;
+    white-space: nowrap;
+}
+.blurred{
+    z-index: 1;
+    position: absolute;
+    top: 38px;
+    right: 10px;
+    border: 1px solid white;
+    background: white;
+    height: 365px;
+    width: 1px;
+    /* filter: blur(1px); */
+    box-shadow: -5px 0 15px 20px rgba(255, 255, 255, 0.9);
+}
+.vitrinler{
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+    /* border: 1px solid red; */
+}
+.vitrinler:empty {
+    display: none;
+}
+.vitrin-yazi-baslik{
+    font-family: 'Trebuchet MS';
+    font-size: 22px;
+    font-weight: 800;
+}
+.vitrin-grup-yazi-baslik{
+    font-family: 'Trebuchet MS';
+    font-size: 22px;
+    font-weight: 800;
+    color: black;
+    padding: 10px;
+    transition: .5s;
+}
+.vitrin-grup-yazi-baslik::after{
+    content: ""; /* This is necessary for the pseudo element to work. */ 
+    display: block; /* This will put the pseudo element on its own line. */
+    width: 3%;
+    padding-top: 1px;
+    border-bottom: 2px solid #4b4b4b;
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+/* .vitrin-grup-yazi-baslik:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 3px 10px 0 rgb(92, 92, 92);
+} */
+.vitrin-right-left-icons{
+    position: absolute;
+    right: 15px;
+    z-index: 2;
+    border-radius: 40px;
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.3);
+}
+.vitrin-right-left-icons span{
+    padding: 10px 15px;
+    color: black;
+    background: white;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.7s ease;
+    text-decoration: none;
+    user-select: none;
+    cursor: pointer;
+}
+.vitrin-right-left-icons span:active{
+    background: #eee;
+}
+.next {
+    border-radius: 0 30px 30px 0;
+}
+.prev {
+    border-radius: 30px 0 0 30px;
+}
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
